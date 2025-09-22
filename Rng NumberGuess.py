@@ -10,7 +10,7 @@ try_again_btn = None #prøv-igjen knapp, starter som None
 
 def check_guess(): #sjekker gjetningen sjekk, oppdater, logg osv.
 	global attempts
-	# prøver å hente tall fra entry. Merk: hvis bruker skriver noe rart krasjer det – antar heltall her
+	# prøver å hente tall fra entry. Merk: hvis bruker skriver noe rart krasjer det bare heltall her
 	guess = int(entry.get()) #henter tall fra entry og gjør det til int
 	attempts += 1 #øker antall forsøk
 	# sammenligner gjetning med hemmelig tall
@@ -79,4 +79,5 @@ if __name__ == "__main__":
 	log_label.pack(pady=(0, 10)) #plassering
 
 	entry.bind('<Return>', on_enter) #definerer "keybind" for Enter-tasten
+
 	root.mainloop() #starter GUI
